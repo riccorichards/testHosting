@@ -13,7 +13,7 @@ app.use(
     credentials: true,
   })
 );
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 
 api(app);
 
