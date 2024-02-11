@@ -9,15 +9,6 @@ const initialize_1 = __importDefault(require("./initialize"));
 const api = (app) => {
     const repo = new repo_1.default(initialize_1.default);
     const service = new service_1.default(repo);
-    app.get("/", async (req, res) => {
-        try {
-            const image = "https://i.pinimg.com/564x/cf/f4/2f/cff42f815b29f0d42d38e00e7f07ddba.jpg";
-            return res.redirect(image);
-        }
-        catch (error) {
-            return res.status(500).json({ msg: "Error" });
-        }
-    });
     app.post("/create", async (req, res) => {
         try {
             const newTest = await service.CreateTestService(req.body);
