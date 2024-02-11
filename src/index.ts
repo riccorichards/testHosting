@@ -9,7 +9,7 @@ const app = expess();
 app.use(expess.json());
 app.use(
   cors({
-    origin: "",
+    origin: "https://test-hosting-five.vercel.app/",
     credentials: true,
   })
 );
